@@ -116,11 +116,13 @@ public class PigLocalGame extends LocalGame {
     protected String checkIfGameOver() {
         if (state.player0Score>=50)
         {
-            return "Player 1 Wins with a Score of: "+state.player0Score;
+            String name = this.playerNames[0];
+            return name+" Wins with a Score of: "+state.player0Score;
         }
         else if (state.player1Score>=50)
         {
-            return "Player 2 Wins with a Score of: "+state.player1Score;
+            String name = this.playerNames[1];
+            return name+" Wins with a Score of: "+state.player1Score;
         }
         else {
             return null;
